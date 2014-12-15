@@ -8,6 +8,11 @@
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="//cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <script src="//cdn-gh.firebase.com/demo-utils-script/demo-utils.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
     <!-- Custom JS -->
     <script src="js/chat.js"></script>
 
@@ -18,9 +23,35 @@
   <body>
     <h1>Firebase Realtime Chat</h1>
 
-    <div id="messagesDiv"></div>
+    <p>Pick a room:
+        <select></select>
+        <a href="#logout">log out</a>
+    </p>
+    <ul class="chatbox"></ul>
+    <form id="chatForm">
+        <input type="text" size="8" name="data" />
+        Date: <input type="text" size="8" name="date" />
+        Amount: <input type="text" size="8" name="amount" />
+        Description: <input type="text" size="8" name="description" />
+        Purchaser: <input type="text" size="8" name="purchaser" />
+        cartland owes...<input type="text" size="8" name="cartland" />
+        npstanford owes...<input type="text" size="8" name="npstanford" />
+        rcrabb owes...<input type="text" size="8" name="rcrabb" />
+        stromme owes...<input type="text" size="8" name="stromme" />
+        Notes: <input type="text" size="8" name="notes" />
 
-    <input type="text" id="nameInput" placeholder="Name" />
-    <input type="text" id="messageInput" placeholder="Message..." />
+
+        <button type="submit">Send</button>
+        <a href="#leave">leave room</a>
+    </form>
+    <p class="result"></p>
+    <p data-target="demo-links"></p>
+    <div id="login-layer">
+        <button id="github-login">Log in with GitHub</button>
+        <button id="google-login">Log in with Google</button>
+    </div>
+    <form id="joinForm">
+        <input type="text" placeholder="Your name..." /><button type="submit">Join Now</button>
+    </form>
   </body>
 </html>

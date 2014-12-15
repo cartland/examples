@@ -1,66 +1,54 @@
-/* Global */
-body {
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 500px;
-  background-color: #f8f8f8;
-  font-size: 24px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #424547;
-  text-align: center;
+ul.chatbox {
+    height: 100px;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-y: auto;
+    word-break: break-all;
+    list-style-type: none;
 }
-
-h1 {
-  font-size: 36px;
-  font-weight: bold;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #424547;
+p.result {
+    color: #00AA00;
+    font-weight: bold;
 }
-
-h3 {
-  font-size: 24px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #424547;
+p.result.note {
+    color: gray;
+    font-weight: normal;
+    font-style: italic;
 }
-
-p {
- font-size: 16px;
+p.result.error {
+    color: red;
 }
-
+input[name="data"] {
+    width: 200px;
+}
+input[name="user"] {
+    width: 100px;
+}
 input {
+    font-size: 14px;
+    line-height: 16px;
+}
+#login-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    text-align: center;
+    padding-top: 50px;
+    z-index: 9999;
+}
+#joinForm {
+    display: none;
+}
+#chatForm {
+    display: none;   
+}
+#login {
   font-size: 24px;
-}
-
-input[type=text] {
-  color: #424547;
-  border: 1px solid #c2c2c2;
-  background-color: white;
-}
-
-em {
-  font-style: normal;
-  font-weight: bold;
-  color: black;
-}
-
-
-/* Chat */
-#messagesDiv {
-  background-color: white;
-  overflow: auto;
-  height: 230px;
-  width: 100%;
+  line-height: 30px;
   padding: 10px;
-  border: 8px solid #424547;
-  margin-bottom: 5px;
-  text-align: left;
-}
-
-#nameInput {
-  width: 26%;
-}
-
-#messageInput {
-  width: 68%;
 }
